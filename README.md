@@ -6,26 +6,11 @@ Designed for freelancers, independent consultants, and service providers who nee
 
 ---
 
-## Visual Preview & Screenshots
+## Visual Preview
 
-### Desktop Split-Pane Interface
-The desktop interface features an independently scrolling left form sidebar paired with a pinned, auto-fitted invoice preview pane that stays perfectly in view without vertical scroll jump.
+The interface features an independently scrolling left form sidebar paired with a pinned, auto-fitted invoice preview pane that stays perfectly in view without vertical scroll jump.
 
 ![Desktop Preview](screenshots/desktop_preview.png)
-
----
-
-### Mobile Tabbed Interface
-On mobile screens, the layout automatically transforms into a touch-friendly segmented tab interface (**Edit Form** and **Preview**), preventing screen crowding and avoiding mobile auto-zoom issues.
-
-![Mobile Preview](screenshots/mobile_preview.png)
-
----
-
-### Exported 1-Page Invoice Sample
-Every invoice is strictly calibrated to guarantee a clean 1-page output—free of trailing blank pages or broken sections.
-
-![Sample Invoice Output](screenshots/sample_invoice_output.png)
 
 ---
 
@@ -34,6 +19,7 @@ Every invoice is strictly calibrated to guarantee a clean 1-page output—free o
 - **Guaranteed Single-Page Layout**: Print and raster styles ensure headers, line-item tables, payment details, and QR codes fit cleanly onto an exact single page.
 - **1-Click High-Resolution PNG Export**: Embedded raster rendering engine (`html2canvas`) captures crisp, retina-ready PNG invoice images directly in the browser with zero external API calls.
 - **1-Click Vector PDF Generation**: Pre-configured CSS `@media print` rules remove UI toolbars and backgrounds for crisp, standards-compliant vector PDF printing.
+- **Mobile Responsive**: Fully responsive layout with segmented tab switcher (**Edit Form** vs. **Preview**) and touch-friendly controls.
 - **Dynamic Multi-Currency Support**: Switch between PHP (₱), USD ($), EUR (€), GBP (£), AUD ($), CAD ($), SGD ($), and AED (AED) with automatic symbol updating across subtotals and grand totals.
 - **Dynamic Line Items**: Add, customize, and delete line items with instant automatic calculation of subtotals, tax/VAT rates, and balance due.
 - **Payment & QR Code Integration**: Dedicated fields for Bank Wire / Electronic Transfer info and GCash / Digital Wallet QR code rendering.
@@ -72,12 +58,11 @@ To use the generator anywhere on your phone or laptop as a live web application:
 ```
 Invoice-Generator/
 ├── index.html                  # Standalone web app (all CSS, HTML, and JS included)
-├── README.md                   # Project documentation and screenshots
+├── README.md                   # Project documentation and preview
+├── LICENSE                     # MIT License
 ├── .gitignore                  # Git ignore rules for exports and temp files
 └── screenshots/
-    ├── desktop_preview.png     # Desktop split-pane screenshot
-    ├── mobile_preview.png      # Mobile tabbed view screenshot
-    └── sample_invoice_output.png # High-res sample invoice export
+    └── desktop_preview.png     # Application preview screenshot
 ```
 
 ---
