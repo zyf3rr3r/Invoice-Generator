@@ -1,38 +1,65 @@
 # Freelance Invoice Generator
 
-A responsive, single-page freelance invoice generator web application with live preview, QR code payment support, and 1-click **1-Page PDF** and **High-Resolution PNG** export.
+A responsive, single-page freelance invoice generator web application featuring live real-time preview, QR code payment support, and 1-click **1-Page PDF** and **High-Resolution PNG** export.
 
-Designed for freelancers, independent contractors, and consultants who need clean, professional, single-page invoices without page-break overflow issues.
-
----
-
-## Features
-
-- **Guaranteed 1-Page Layout**: Specifically calibrated print and render styles prevent awkward page breaks and unwanted blank pages.
-- **1-Click High-Resolution PNG Export**: Embedded raster rendering engine (`html2canvas`) generates clean 2x crisp PNG images instantly in your browser without uploading data to external servers.
-- **1-Click Print & PDF Generation**: Native browser print styling optimized for clean vector PDF generation.
-- **Fully Responsive & Mobile-Optimized**:
-  - **Desktop**: Split-pane layout where the left form sidebar scrolls independently while the invoice preview stays fixed in place.
-  - **Mobile**: Intuitive segmented tab switcher (**Edit Form** vs. **Preview**) with touch-optimized controls and auto-zooming prevention.
-- **Multi-Currency Support**: Switch between PHP (₱), USD ($), EUR (€), GBP (£), AUD ($), CAD ($), SGD ($), and AED (AED) with automatic symbol updating.
-- **Dynamic Line Items**: Add, remove, and update invoice items with automatic real-time calculation of subtotals, tax/VAT, and balances.
-- **Payment & QR Code Support**: Includes payment details for Bank Wire / Electronic Transfer and GCash QR code visualization.
-- **Quick Presets**: Rapidly switch between pre-configured invoice templates or reset to a clean blank state.
-- **100% Client-Side & Private**: Runs entirely in the browser. No tracking, no backend servers, and zero telemetry.
+Designed for freelancers, independent consultants, and service providers who need clean, professional, single-page invoices without awkward page-break overflow.
 
 ---
 
-## Live Demo & Usage
+## Visual Preview & Screenshots
 
-### 1. Run Locally
-Open `index.html` directly in any modern web browser (Chrome, Edge, Safari, Firefox). No installation or server required.
+### Desktop Split-Pane Interface
+The desktop interface features an independently scrolling left form sidebar paired with a pinned, auto-fitted invoice preview pane that stays perfectly in view without vertical scroll jump.
 
-### 2. Deploy to GitHub Pages
-To use the invoice generator as a web app on your phone or computer:
-1. Go to your repository **Settings** on GitHub.
-2. Select **Pages** from the left navigation.
+![Desktop Preview](screenshots/desktop_preview.png)
+
+---
+
+### Mobile Tabbed Interface
+On mobile screens, the layout automatically transforms into a touch-friendly segmented tab interface (**Edit Form** and **Preview**), preventing screen crowding and avoiding mobile auto-zoom issues.
+
+![Mobile Preview](screenshots/mobile_preview.png)
+
+---
+
+### Exported 1-Page Invoice Sample
+Every invoice is strictly calibrated to guarantee a clean 1-page output—free of trailing blank pages or broken sections.
+
+![Sample Invoice Output](screenshots/sample_invoice_output.png)
+
+---
+
+## Key Features
+
+- **Guaranteed Single-Page Layout**: Print and raster styles ensure headers, line-item tables, payment details, and QR codes fit cleanly onto an exact single page.
+- **1-Click High-Resolution PNG Export**: Embedded raster rendering engine (`html2canvas`) captures crisp, retina-ready PNG invoice images directly in the browser with zero external API calls.
+- **1-Click Vector PDF Generation**: Pre-configured CSS `@media print` rules remove UI toolbars and backgrounds for crisp, standards-compliant vector PDF printing.
+- **Dynamic Multi-Currency Support**: Switch between PHP (₱), USD ($), EUR (€), GBP (£), AUD ($), CAD ($), SGD ($), and AED (AED) with automatic symbol updating across subtotals and grand totals.
+- **Dynamic Line Items**: Add, customize, and delete line items with instant automatic calculation of subtotals, tax/VAT rates, and balance due.
+- **Payment & QR Code Integration**: Dedicated fields for Bank Wire / Electronic Transfer info and GCash / Digital Wallet QR code rendering.
+- **Quick Presets**: Instant one-click templates to quickly prefill client data or reset to a clean blank slate.
+- **100% Client-Side & Private**: Runs entirely in your web browser. No tracking, no analytics, no external servers, and zero data leaves your machine.
+
+---
+
+## How to Use
+
+### Option 1: Run Locally (Offline)
+1. Clone or download this repository:
+   ```bash
+   git clone https://github.com/zyf3rr3r/Invoice-Generator.git
+   ```
+2. Double-click `index.html` to open it in any web browser (Chrome, Edge, Safari, Firefox).
+3. Fill in your details, select your currency, customize line items, and click **Print / Save 1-Page PDF** or **Save as PNG**.
+
+---
+
+### Option 2: Free Hosting on GitHub Pages
+To use the generator anywhere on your phone or laptop as a live web application:
+1. Navigate to your repository **Settings** on GitHub.
+2. Select **Pages** from the left-hand navigation menu.
 3. Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
-4. Set the branch to `main` and folder to `/(root)`, then click **Save**.
+4. Select the `main` branch and folder `/(root)`, then click **Save**.
 5. Your live app will be accessible at:
    ```
    https://zyf3rr3r.github.io/Invoice-Generator/
@@ -44,13 +71,17 @@ To use the invoice generator as a web app on your phone or computer:
 
 ```
 Invoice-Generator/
-├── index.html       # Standalone single-page application (CSS, HTML, JS)
-├── README.md        # Documentation and usage guide
-└── .gitignore       # Git ignore rules
+├── index.html                  # Standalone web app (all CSS, HTML, and JS included)
+├── README.md                   # Project documentation and screenshots
+├── .gitignore                  # Git ignore rules for exports and temp files
+└── screenshots/
+    ├── desktop_preview.png     # Desktop split-pane screenshot
+    ├── mobile_preview.png      # Mobile tabbed view screenshot
+    └── sample_invoice_output.png # High-res sample invoice export
 ```
 
 ---
 
 ## License
 
-This project is licensed under the MIT License.
+This project is open-source and available under the [MIT License](LICENSE).
