@@ -1,0 +1,17 @@
+# Personal documents and exports
+*.pdf
+*.png
+!screenshots/*.png
+*.jpg
+*.jpeg
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Node / Environment
+node_modules/
+.env
